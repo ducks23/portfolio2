@@ -2,7 +2,7 @@ import React from "react";
 
 const Work = () => {
   return (
-    <div className="flex flex-col pt-10 p-8">
+    <div className="flex flex-col pt-1 pl-9 pr-9">
       <div className="flex">
         <div className=" text-gray-700 pl-3 pr-3 pt-1 pb-1 mx-auto bg-gray-300 max-w-2xl rounded-full">
           Hello, I'm an App Developer based in Austin Texas.
