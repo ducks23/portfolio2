@@ -4,9 +4,10 @@ const Work = () => {
   return (
     <div className="flex flex-col pt-1 pl-9 pr-9">
       <div className="flex">
-        <div className=" flex dark:text-gray-900 bg-gray-300 text-center pl-3 pr-3 pt-1 pb-1 mx-auto dark:bg-blue-300 max-w-2xl rounded-full">
-          Hello, I'm a&nbsp;<p className="font-semibold">human being</p>{" "}
-          &nbsp;based in Austin Texas.
+        <div className=" flex md:text-base text-sm dark:text-gray-900 bg-gray-300 text-center pl-2 pr-2 pt-1 pb-1 mx-auto dark:bg-blue-300 rounded-full">
+          <div>Hello, I'm a&nbsp;</div>
+          <p className="font-semibold">human being</p>{" "}
+          <div>&nbsp;based in Austin Texas.</div>
         </div>
       </div>
       <div className="mx-auto">
