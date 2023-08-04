@@ -1,6 +1,8 @@
 import { request, gql } from "graphql-request";
 
-const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+// const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+const graphqlAPI =
+  "https://api-us-west-2.hygraph.com/v2/clk8ruddh1oey01t5cg1p79bt/master";
 
 export const getRecentPosts = async () => {
   const query = gql`
