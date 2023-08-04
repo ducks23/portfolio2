@@ -36,8 +36,10 @@ const useDarkMode = () => {
 
   useEffect(() => {
     const className = "dark";
-    const bodyClass = window.document.body.classList;
-
+    let bodyClass = window.document.body.classList;
+    if (typeof window !== "undefined") {
+      bodyClass = window.document.body.classList;
+    }
     isEnabled ? bodyClass.add(className) : bodyClass.remove(className);
   }, [enabled, isEnabled]);
 

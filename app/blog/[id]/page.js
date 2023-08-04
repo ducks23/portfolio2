@@ -6,7 +6,6 @@ import PostWidget from "@/components/blog/PostWidget";
 import { getPostDetails } from "@/services";
 
 export default async function PostDetails({ params }) {
-  console.log(params.id, "s  lug");
   const post = await getPostDetails(params.id);
 
   return (
