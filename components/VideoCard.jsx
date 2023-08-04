@@ -1,9 +1,5 @@
 import React from "react";
 
-// prodction
-// const apiKey = process.env.API_KEY;
-// const apiUrl = process.env.API_URL;
-
 const apiKey = process.env.YOUTUBE_API_KEY;
 const channelId = process.env.CHANNEL_ID;
 const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=20`;
