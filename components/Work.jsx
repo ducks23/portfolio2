@@ -5,7 +5,7 @@ const Work = () => {
     <div className="flex flex-col pt-1 pl-9 pr-9">
       <div className="flex">
         <div className=" dark:text-gray-900 bg-gray-300 text-center pl-3 pr-3 pt-1 pb-1 mx-auto dark:bg-blue-300 max-w-2xl rounded-full">
-          Hello, I'm an App Developer based in Austin Texas.
+          Hello, I'm a human being based in Austin Texas.
         </div>
       </div>
       <div className="mx-auto">
