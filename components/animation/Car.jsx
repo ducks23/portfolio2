@@ -1,8 +1,12 @@
+"use client";
+
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { Light, Scene } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { loadGLTFModel } from "../../lib/model";
+import { Spinner } from "@chakra-ui/react";
+import CarLoader from "./CarLoader";
 
 const Car = () => {
   const refBody = useRef();
@@ -53,7 +57,6 @@ const Car = () => {
       setRenderer(renderer);
 
       const scale = scH * 0.01 + 4.8;
-      console.log(scale, scH);
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
@@ -66,8 +69,8 @@ const Car = () => {
       camera.lookAt(target);
       setCamera(camera);
 
-      const ambientLight = new THREE.DirectionalLight(0xffffff, 60);
-      ambientLight.position.set(0, 10, 0);
+      const ambientLight = new THREE.DirectionalLight(0xffffff, 70);
+      ambientLight.position.set(2, 15, 2);
       scene.add(ambientLight);
 
       const controls = new OrbitControls(camera, renderer.domElement);
@@ -92,9 +95,9 @@ const Car = () => {
 
         if (frame <= 100) {
           const p = initialCameraPosition;
-          const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20;
+          const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 12;
 
-          camera.position.y = 2;
+          camera.position.y = 3;
           camera.position.x =
             p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed);
           camera.position.z =
@@ -124,8 +127,8 @@ const Car = () => {
 
   return (
     <div className="flex justify-center pt-0 flex-col">
-      <div className="mx-auto w-[40vh] h-[40vh]" ref={refBody}>
-        {loading && <p>loading...</p>}
+      <div className="mx-auto w-[37vh] h-[37vh]" ref={refBody}>
+        {loading && <CarLoader />}
       </div>
     </div>
   );
