@@ -1,0 +1,4 @@
+node_modules
+*.glb
+.next/
+.env
