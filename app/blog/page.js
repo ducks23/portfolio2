@@ -25,7 +25,9 @@ export default async function Blog() {
   );
 }
 
-const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+//const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+const graphqlAPI =
+  "https://api-us-west-2.hygraph.com/v2/clk8ruddh1oey01t5cg1p79bt/master";
 
 export async function getPosts() {
   const query = gql`
