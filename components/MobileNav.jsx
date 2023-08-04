@@ -1,97 +1,124 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
+import Grid from "@mui/material/Grid";
+
+import HomeIcon from "@mui/icons-material/Home";
+import InfoIcon from "@mui/icons-material/Info";
+import Link from "next/link";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function TemporaryDrawer() {
-  const [state, setState] = React.useState({
-    right: false,
-  });
-
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-
-    setState({ ...state, [anchor]: open });
-  };
-
-  const list = (anchor) => (
-    <Box
-      sx={{
-        p: 1,
-
-        color: "",
-        width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
-      }}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List>
-        {["Home", "Projects", "Blog", "Resume"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["Linkedin", "Youtube", "Github"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
+  const [open, setOpen] = React.useState(false);
   const size = "35px";
+
+  const variant = "left";
   return (
-    <div>
-      {["right"].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button
-            style={{
-              maxWidth: size,
-              maxHeight: size,
-              minWidth: size,
-              minHeight: size,
-            }}
-            onClick={toggleDrawer(anchor, true)}
-          >
-            <MenuIcon />
-          </Button>
-          <Drawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-          >
-            {list("anchor")}
-          </Drawer>
-        </React.Fragment>
-      ))}
-    </div>
+    <Grid container justifyContent="flex-start" alignItems="center">
+      <Grid item>
+        <Drawer
+          open={open}
+          anchor="right"
+          onClose={() => setOpen(false)}
+          PaperProps={{
+            sx: {
+              backgroundColor: "#3749ad",
+              width: 250,
+            },
+          }}
+        >
+          <List>
+            <Link href={`/`}>
+              <ListItem button onClick={() => setOpen(false)}>
+                <ListItemIcon>
+                  <ListItem
+                    style={{
+                      textDecoration: "none",
+                      color: "#fff",
+                      fontWeight: "bolder",
+                    }}
+                    to="/"
+                  >
+                    <HomeIcon className="mr-3" sx={{ color: "white" }} /> Home
+                  </ListItem>
+                </ListItemIcon>
+              </ListItem>
+            </Link>
+            <Link href={`/blog`}>
+              <ListItem button onClick={() => setOpen(false)}>
+                <ListItemIcon>
+                  <ListItem
+                    style={{
+                      textDecoration: "none",
+                      color: "#fff",
+                      fontWeight: "bolder",
+                    }}
+                    to="/about"
+                  >
+                    <InfoIcon className="mr-3" sx={{ color: "white" }} />
+                    Blog
+                  </ListItem>
+                </ListItemIcon>
+              </ListItem>
+            </Link>
+            <Link href={`https://github.com/ducks23`}>
+              <ListItem button onClick={() => setOpen(false)}>
+                <ListItemIcon>
+                  <ListItem
+                    style={{
+                      textDecoration: "none",
+                      color: "#fff",
+                      fontWeight: "bolder",
+                    }}
+                  >
+                    <GitHubIcon className="mr-3" sx={{ color: "white" }} />
+                    Github
+                  </ListItem>
+                </ListItemIcon>
+              </ListItem>
+            </Link>
+            <Link
+              href={`https://www.youtube.com/channel/UCsbiWRPPhj6BfmqGqQeIhVw`}
+            >
+              <ListItem button onClick={() => setOpen(false)}>
+                <ListItemIcon>
+                  <ListItem
+                    style={{
+                      textDecoration: "none",
+                      color: "#fff",
+                      fontWeight: "bolder",
+                    }}
+                    to="/about"
+                  >
+                    <YouTubeIcon className="mr-3" sx={{ color: "white" }} />
+                    Youtube
+                  </ListItem>
+                </ListItemIcon>
+              </ListItem>
+            </Link>
+          </List>
+        </Drawer>
+      </Grid>
+
+      <Grid item>
+        <Button
+          style={{
+            maxWidth: size,
+            maxHeight: size,
+            minWidth: size,
+            minHeight: size,
+          }}
+          onClick={() => setOpen(!open)}
+        >
+          <MenuIcon />
+        </Button>
+      </Grid>
+    </Grid>
   );
 }

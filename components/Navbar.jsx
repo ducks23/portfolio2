@@ -47,7 +47,11 @@ const Navbar = () => {
               </Link>
 
               <div className="flex items-center space-x-3 pl-6 ml-4">
-                <a>Projects</a>
+                <Link href={`/resume`}>
+                  <span className="transition duration-500 ease transform cursor-pointer">
+                    Resume
+                  </span>
+                </Link>{" "}
                 <Link href={`/blog`}>
                   <span className="transition duration-500 ease transform cursor-pointer">
                     Blog
