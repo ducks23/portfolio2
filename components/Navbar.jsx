@@ -2,25 +2,10 @@
 import Link from "next/link";
 
 import useDarkMode from "../hooks/useDarkMode";
-import { FaMoon, FaSun, FaGithub, FaList, FaBars } from "react-icons/fa";
+import { FaMoon, FaSun, FaGithub } from "react-icons/fa";
 import TemporaryDrawer from "./MobileNav";
 
-import {
-  Container,
-  Box,
-  MenuItem,
-  MenuList,
-  HamburgerIcon,
-  MenuButton,
-  Collapse,
-  useDisclosure,
-  Icon,
-  ChakraProvider,
-  IconButton,
-  Button,
-  onToggle,
-  ButtonGroup,
-} from "@chakra-ui/react";
+import { useDisclosure } from "@chakra-ui/react";
 
 const ThemeIcon = () => {
   const [darkTheme, setDarkTheme] = useDarkMode();

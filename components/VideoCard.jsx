@@ -35,14 +35,16 @@ export default async function VideoCard() {
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">{post.snippet.title}</div>
-              <p class="text-gray-700 text-base">Description:</p>
-              <p class="text-gray-700 text-base">{post.snippet.description}</p>
+              <p className="text-gray-700 text-base">Description:</p>
+              <p className="text-gray-700 text-base">
+                {post.snippet.description}
+              </p>
             </div>
             <div>
               <div className="mx-auto px-6 pt-2 pb-8">
                 <a
                   href={`https://www.youtube.com/watch?v=${post.id.videoId}&ab_channel=JesseLeonard-CloudArchitect`}
-                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 >
                   Watch
                 </a>
