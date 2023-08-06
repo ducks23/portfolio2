@@ -12,8 +12,11 @@ const ThemeIcon = () => {
   const [darkTheme, setDarkTheme] = useDarkMode();
   const handleMode = () => setDarkTheme(!darkTheme);
   return (
-    <div className="dark:bg-purple-800 cursor-pointer dark:text-yellow-300 text-white rounded-lg hover:text-white p-2 dark:hover:text-purple-800 hover:bg-blue-300 bg-gray-500  dark:hover:bg-yellow-400 mr-5">
-      <span onClick={handleMode}>
+    <div
+      onClick={handleMode}
+      className="dark:bg-purple-800 cursor-pointer dark:text-yellow-300 text-white rounded-lg hover:text-white dark:hover:text-purple-800 hover:bg-blue-300 bg-gray-500 p-1 dark:hover:bg-yellow-400 mr-5"
+    >
+      <span>
         {darkTheme ? (
           <LightModeIcon size="10" className="top-navigation-icon" />
         ) : (
