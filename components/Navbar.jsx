@@ -3,8 +3,10 @@ import Link from "next/link";
 
 import useDarkMode from "../hooks/useDarkMode";
 import { FaMoon, FaSun, FaGithub } from "react-icons/fa";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 import TemporaryDrawer from "./MobileNav";
-import { useDisclosure } from "@chakra-ui/react";
+import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 
 const ThemeIcon = () => {
   const [darkTheme, setDarkTheme] = useDarkMode();
@@ -13,9 +15,9 @@ const ThemeIcon = () => {
     <div className="dark:bg-purple-800 cursor-pointer dark:text-yellow-300 text-white rounded-lg hover:text-white p-2 dark:hover:text-purple-800 hover:bg-blue-300 bg-gray-500  dark:hover:bg-yellow-400 mr-5">
       <span onClick={handleMode}>
         {darkTheme ? (
-          <FaSun size="17" className="top-navigation-icon" />
+          <LightModeIcon size="10" className="top-navigation-icon" />
         ) : (
-          <FaMoon size="17" className="top-navigation-icon" />
+          <DarkModeIcon size="10" className="top-navigation-icon" />
         )}
       </span>
     </div>
@@ -30,30 +32,21 @@ const Navbar = () => {
           <div className="flex justify-between">
             <div className="flex space-x-2 hover:underline-offset-2 ">
               <Link
-                className=" hover:bg-gray-300 px-1 hover:rounded rounded-lg pr-2 flex items-center  transition duration-500 ease cursor-pointer "
+                className=" hover:bg-gray-300 px-1 hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 ease cursor-pointer "
                 href={`/`}
               >
-                <svg
-                  className="h-5 w-5 mr-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                >
-                  <path d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-                </svg>
+                <RocketLaunchIcon />
                 <span className="font-bold">Jesse</span>
               </Link>
 
               <div className="flex items-center">
                 <Link href={`/resume`}>
-                  <span className=" hover:bg-gray-300 px-2 py-[7px] rounded-lg border-red-700 font-bold mr-2 hover:rounded transition duration-500 ease transform cursor-pointer">
+                  <span className=" hover:bg-gray-300 px-2 py-[7px] rounded-lg border-red-700 font-bold mr-2 hover:rounded-lg transition duration-500 ease transform cursor-pointer">
                     Resume
                   </span>
                 </Link>{" "}
                 <Link href={`/blog`}>
-                  <span className="transition hover:bg-gray-300 px-2 py-[7px] font-bold duration-500 rounded-lg ease  transform cursor-pointer">
+                  <span className="transition hover:bg-gray-300 px-2 py-[7px] hover:rounded-lg font-bold duration-500 rounded-lg ease  transform cursor-pointer">
                     Blog
                   </span>
                 </Link>
@@ -71,7 +64,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="md:hidden mx-auto py-3 flex justify-end pr-4">
+      <div className="md:hidden mx-auto  flex justify-end pr-4">
         <div className="flex ">
           <ThemeIcon />
           <div className="bg-gray-300 rounded ml-0">

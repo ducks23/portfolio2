@@ -79,12 +79,6 @@ const Work = () => {
           </div>
         </div>
       </div>
-      <div className="flex pt-6 justify-center space-x-5 ">
-        {" "}
-        <button className="dark:bg-blue-200 text-blue-500 rounded-full hover:bg-gray-400 hover:text-blue-700 bg-gray-300 p-3">
-          <a className="font-semibold text-lg">RESUME</a>
-        </button>
-      </div>
     </div>
   );
 };
