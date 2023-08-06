@@ -4,7 +4,7 @@ import Link from "next/link";
 import useDarkMode from "../hooks/useDarkMode";
 import { FaMoon, FaSun, FaGithub } from "react-icons/fa";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
+import NightlightOutlinedIcon from "@mui/icons-material/NightlightOutlined";
 import TemporaryDrawer from "./MobileNav";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 
@@ -14,13 +14,13 @@ const ThemeIcon = () => {
   return (
     <div
       onClick={handleMode}
-      className="dark:bg-purple-800 cursor-pointer dark:text-yellow-300 text-white rounded-lg hover:text-white dark:hover:text-purple-800 hover:bg-blue-300 bg-gray-500 p-1 dark:hover:bg-yellow-400 mr-5"
+      className="dark:bg-purple-800 cursor-pointer dark:text-blue-200 text-white rounded-lg hover:text-white dark:hover:text-purple-800 hover:bg-blue-300 bg-gray-500 p-1 dark:hover:bg-yellow-400 mr-5"
     >
       <span>
         {darkTheme ? (
-          <LightModeIcon size="10" className="top-navigation-icon" />
+          <FaSun size="20" className="top-navigation-icon" />
         ) : (
-          <DarkModeIcon size="10" className="top-navigation-icon" />
+          <FaMoon size="20" className="top-navigation-icon" />
         )}
       </span>
     </div>
