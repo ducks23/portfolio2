@@ -4,7 +4,7 @@ const Work = () => {
   return (
     <div className="flex flex-col pt-1 pl-9 pr-9">
       <div className="flex">
-        <div className=" flex md:text-base text-sm dark:text-gray-900 bg-gray-300 text-center pl-2 pr-2 pt-1 pb-1 mx-auto dark:bg-blue-300 rounded-full">
+        <div className=" flex md:text-base text-sm text-gray-900 bg-gray-300 text-center pl-2 pr-2 pt-1 pb-1 mx-auto dark:bg-blue-300 rounded-full">
           <div className=" font-semibold">
             Hello, I'm a human being based in Austin Texas.
           </div>
