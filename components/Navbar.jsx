@@ -14,7 +14,7 @@ const ThemeIcon = () => {
   return (
     <div
       onClick={handleMode}
-      className="dark:bg-purple-800 cursor-pointer dark:text-blue-200 text-white rounded-lg hover:text-white dark:hover:text-purple-800 hover:bg-blue-300 bg-gray-500 p-1 dark:hover:bg-yellow-400 mr-5"
+      className="dark:bg-purple-800 transition duration-500 cursor-pointer dark:text-blue-200 text-white rounded-lg hover:text-white dark:hover:text-purple-800 hover:bg-blue-300 bg-gray-500 p-1 dark:hover:bg-yellow-400 mr-5"
     >
       <span>
         {darkTheme ? (
