@@ -24,28 +24,34 @@ export default async function VideoCard() {
   const posts = await fetchYouTubeData();
 
   return (
-    <div className="p-0">
-      <h1 className="text-center text-4xl pt-14">Videos</h1>
+    <div className="p-0 dark:bg-darkmain">
+      <h1 className="text-center pb-2 dark:text-darksecondary text-secondary text-4xl pt-8">
+        Videos
+      </h1>
       {posts.map((post, index) => (
         <div className="p-4">
-          <div className="max-w-md pt-2 mx-auto rounded-2xl bg-gray-300">
+          <div className="max-w-md pt-2 mx-auto rounded-2xl dark:bg-darkthird dark:text-darksecondary bg-main">
             <img
               className="w-full h-64 object-cover rounded-2xl p-2"
               src={post.snippet.thumbnails.high.url}
               alt="Card Image"
             />
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">{post.snippet.title}</div>
-              <p className="text-gray-700 text-base">Description:</p>
-              <p className="text-gray-700 text-base">
+              <div className="font-bold text-secondary dark:text-darksecondary text-xl mb-2">
+                {post.snippet.title}
+              </div>
+              <p className="text-secondary dark:text-darksecondary text-base">
+                Description:
+              </p>
+              <p className="text-secondary dark:text-darksecondary text-base">
                 {post.snippet.description}
               </p>
             </div>
             <div>
-              <div className="mx-auto px-6 pt-2 pb-8">
+              <div className="mx-auto text-center px-6 pt-2 pb-8">
                 <a
                   href={`https://www.youtube.com/watch?v=${post.id.videoId}&ab_channel=JesseLeonard-CloudArchitect`}
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  className="bg-third hover:bg-darkmain dark:text-darksecondary dark:bg-darkmain dark:hover:bg-purple transition duration-300 text-main font-bold py-2 px-4 rounded"
                 >
                   Watch
                 </a>

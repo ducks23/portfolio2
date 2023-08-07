@@ -1,15 +1,17 @@
 import React from "react";
-
+import Link from "next/link";
 const Work = () => {
   return (
-    <div className="flex flex-col pt-1 pl-9 pr-9">
+    <div className="flex flex-col dark:bg-darkmain text-secondary pt-1 pl-9 pr-9">
       <div className="flex">
-        <div className=" dark:text-gray-900 bg-gray-300 text-center pl-3 pr-3 pt-1 pb-1 mx-auto dark:bg-blue-300 max-w-2xl rounded-full">
-          Hello, I'm an App Developer based in Austin Texas.
+        <div className=" flex md:text-lg  text-sm dark:bg-darkthird dark:text-darksecondary bg-main text-center px-4 py-2 mx-auto dark:bg-blue-300 rounded-full">
+          <div className=" font-semibold">
+            Hello, I'm a human being based in Austin Texas.
+          </div>
         </div>
       </div>
       <div className="mx-auto">
-        <div className="dark:text-white pt-5 max-w-2xl text-gray-500 ">
+        <div className=" dark:text-darksecondary pt-5 max-w-2xl  ">
           <div className="text-left">
             <h1 className="header underline-offset-2 underline text-3xl">
               Work
@@ -25,7 +27,7 @@ const Work = () => {
             YouTube channel.
           </div>
         </div>
-        <div className="dark:text-white text-gray-500">
+        <div className="dark:text-darksecondary">
           <div className="bio text-3xl underline underline-offset-2 pt-8">
             Bio
           </div>
@@ -77,11 +79,14 @@ const Work = () => {
           </div>
         </div>
       </div>
-      <div className="flex pt-6 justify-center space-x-5 ">
-        {" "}
-        <button className="dark:bg-blue-200 text-blue-500 rounded-full hover:bg-gray-400 hover:text-blue-700 bg-gray-300 p-3">
-          <a className="font-semibold text-lg">RESUME</a>
-        </button>
+      <div>
+        <Link className="text-center" href={"/resume"}>
+          <div className="pt-8">
+            <button className="p-3 transition duration-500  hover:bg-third rounded-full bg-main">
+              Resume
+            </button>
+          </div>
+        </Link>
       </div>
     </div>
   );

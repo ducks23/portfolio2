@@ -1,3 +1,8 @@
-export default async function Resume() {
-  return <div className="container mx-auto px-10 mb-8">coming soon</div>;
+import Resume from "@/components/Resume";
+export default async function Page() {
+  return (
+    <div className="dark:bg-darkmain dark:text-darksecondary">
+      <Resume />
+    </div>
+  );
 }
