@@ -7,11 +7,12 @@ import Grid from "@mui/material/Grid";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import Link from "next/link";
-import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
+import RssFeedIcon from "@mui/icons-material/RssFeed";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import MenuIcon from "@mui/icons-material/Menu";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import DescriptionIcon from "@mui/icons-material/Description";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function TemporaryDrawer() {
@@ -50,6 +51,22 @@ export default function TemporaryDrawer() {
                 </ListItemIcon>
               </ListItem>
             </Link>
+            <Link href={`/resume`}>
+              <ListItem button onClick={() => setOpen(false)}>
+                <ListItemIcon>
+                  <ListItem
+                    style={{
+                      textDecoration: "none",
+                      color: "#fff",
+                      fontWeight: "bolder",
+                    }}
+                  >
+                    <DescriptionIcon className="mr-3" sx={{ color: "white" }} />
+                    Resume
+                  </ListItem>
+                </ListItemIcon>
+              </ListItem>
+            </Link>
             <Link href={`/blog`}>
               <ListItem button onClick={() => setOpen(false)}>
                 <ListItemIcon>
@@ -61,7 +78,7 @@ export default function TemporaryDrawer() {
                     }}
                     to="/about"
                   >
-                    <InfoIcon className="mr-3" sx={{ color: "white" }} />
+                    <RssFeedIcon className="mr-3" sx={{ color: "white" }} />
                     Blog
                   </ListItem>
                 </ListItemIcon>

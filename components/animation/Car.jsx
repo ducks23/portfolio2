@@ -127,7 +127,7 @@ const Car = () => {
 
   return (
     <div className="flex justify-center pt-0 flex-col">
-      <div className="mx-auto w-[37vh] h-[37vh]" ref={refBody}>
+      <div className="mx-auto  md:mt-0 mt-20 w-[37vh] h-[37vh]" ref={refBody}>
         {loading && <CarLoader />}
       </div>
     </div>

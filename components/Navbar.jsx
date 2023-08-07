@@ -67,7 +67,14 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="md:hidden  dark:bg-blue-300 bg-gray-200 w-full fixed p-3 mx-auto flex justify-end pr-4">
+      <div className="md:hidden  dark:bg-blue-300 bg-gray-200 w-full fixed p-3 mx-auto flex justify-between pr-4">
+        <Link className="my-auto cursor-pointer" href={"/"}>
+          <div className="flex font-bold">
+            {" "}
+            <RocketLaunchIcon className=" ml-4" />{" "}
+            <div className="my-auto ml-1"> Jesse </div>
+          </div>
+        </Link>
         <div className="flex">
           <ThemeIcon />
           <div className="bg-gray-300 rounded ml-0">
