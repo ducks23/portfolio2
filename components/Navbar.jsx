@@ -14,7 +14,7 @@ const ThemeIcon = () => {
   return (
     <div
       onClick={handleMode}
-      className="dark:bg-purple-800 transition duration-500 cursor-pointer dark:text-blue-200 text-white  rounded-lg hover:text-white dark:hover:text-purple-800 hover:bg-blue-300 bg-gray-500 p-2 dark:hover:bg-yellow-400 mr-5"
+      className="dark:bg-purple-800 transition duration-500 cursor-pointer dark:text-blue-200 text-white  rounded-lg hover:text-white dark:hover:text-purple-600 hover:bg-blue-300 bg-gray-500 p-2 dark:hover:bg-white mr-5"
     >
       <span>
         {darkTheme ? (
@@ -35,7 +35,7 @@ const Navbar = () => {
           <div className="flex justify-between">
             <div className="flex space-x-2 hover:underline-offset-2 ">
               <Link
-                className=" hover:bg-gray-300 px-1 hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 ease cursor-pointer "
+                className=" hover:bg-gray-300 px-1 hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
                 href={`/`}
               >
                 <RocketLaunchIcon />
