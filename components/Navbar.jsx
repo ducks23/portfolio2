@@ -67,8 +67,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="md:hidden top-0 dark:bg-blue-300 bg-gray-200 w-full fixed p-3 mx-auto flex justify-end pr-4">
-        <div className="flex ">
+      <div className="md:hidden  dark:bg-blue-300 bg-gray-200 w-full fixed p-3 mx-auto flex justify-end pr-4">
+        <div className="flex">
           <ThemeIcon />
           <div className="bg-gray-300 rounded ml-0">
             <TemporaryDrawer />{" "}
