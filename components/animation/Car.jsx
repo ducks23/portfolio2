@@ -126,7 +126,7 @@ const Car = () => {
   }, [renderer, handleWindowResize]);
 
   return (
-    <div className="flex justify-center pt-0 flex-col">
+    <div className="flex  dark:bg-darkmain justify-center pt-0 flex-col">
       <div className="mx-auto  md:mt-0 mt-20 w-[37vh] h-[37vh]" ref={refBody}>
         {loading && <CarLoader />}
       </div>

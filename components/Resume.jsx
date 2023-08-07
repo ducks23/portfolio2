@@ -1,6 +1,6 @@
 export default function Resume() {
   return (
-    <div className=" flex  text-gray-700 flex-col font-mono max-w-3xl container mx-auto p-7 mb-8">
+    <div className=" flex bg-main dark:bg-darkmain w-full flex-col font-mono max-w-3xl container mx-auto p-7 mb-8">
       <h1 className=" text-center md:mt-0 mt-10 text-3xl">Jesse Leonard</h1>
       <div className="pt-5">
         &nbsp; I’m a Backend Software Engineer that has really enjoyed working

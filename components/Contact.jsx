@@ -32,7 +32,7 @@ const Contact = () => {
     <>
       <div>
         <div className="contact-page flex justify-center p-6 text-cetner mx-auto ">
-          <div className="bg-gray-300 p-4 max-w-3xl text-center rounded-lg">
+          <div className="bg-main text-secondary p-4 max-w-3xl text-center rounded-lg">
             <h1 className="p-4 text-2xl underline underline-offset-4">
               Contact Me
             </h1>
@@ -78,7 +78,7 @@ const Contact = () => {
                   </li>
                   <li>
                     <input
-                      className="rounded-full hover:bg-blue-300 px-5 py-2 cursor-pointer transition duration-500 bg-white"
+                      className="rounded-full hover:bg-third text-secondary px-5 py-2 cursor-pointer transition duration-500 bg-grayer"
                       type="submit"
                       value="SEND"
                     />

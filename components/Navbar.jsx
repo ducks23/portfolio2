@@ -14,7 +14,7 @@ const ThemeIcon = () => {
   return (
     <div
       onClick={handleMode}
-      className="dark:bg-purple-800 transition duration-500 cursor-pointer dark:text-blue-200 text-white  rounded-lg hover:text-white dark:hover:text-purple-600 hover:bg-blue-300 bg-gray-500 p-2 dark:hover:bg-white mr-5"
+      className=" hover:bg-third transition duration-500 cursor-pointer  rounded-lg p-2 mr-5"
     >
       <span>
         {darkTheme ? (
@@ -29,13 +29,13 @@ const ThemeIcon = () => {
 
 const Navbar = () => {
   return (
-    <nav className="dark:bg-blue-300 bg-gray-200 text-gray-700 dark:text-blue-950 shadow font-mono">
+    <nav className="dark:bg-darkthird dark:text-darksecondary text-secondary bg-main shadow font-mono">
       <div className="hidden md:block pr-5 pl-5">
         <div className="max-w-4xl py-4 px-1 mx-auto">
-          <div className="flex justify-between">
+          <div className="flex dark:text-darksecondary text-secondary justify-between">
             <div className="flex space-x-2 hover:underline-offset-2 ">
               <Link
-                className=" hover:bg-gray-300 px-1 hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
+                className=" hover:bg-third hover:text-main px-1 hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
                 href={`/`}
               >
                 <RocketLaunchIcon />
@@ -44,12 +44,12 @@ const Navbar = () => {
 
               <div className="flex items-center">
                 <Link href={`/resume`}>
-                  <span className=" hover:bg-gray-300 px-2 py-[7px] rounded-lg border-red-700 font-bold mr-2 hover:rounded-lg transition duration-500 ease transform cursor-pointer">
+                  <span className=" hover:bg-third hover:text-main px-2 py-[7px] rounded-lg border-red-700 font-bold mr-2 hover:rounded-lg transition duration-500 ease transform cursor-pointer">
                     Resume
                   </span>
                 </Link>{" "}
                 <Link href={`/blog`}>
-                  <span className="transition hover:bg-gray-300 px-2 py-[7px] hover:rounded-lg font-bold duration-500 rounded-lg ease  transform cursor-pointer">
+                  <span className="transition hover:bg-third px-2 py-[7px] hover:rounded-lg hover:text-main font-bold duration-500 rounded-lg ease  transform cursor-pointer">
                     Blog
                   </span>
                 </Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center space-x-2">
               <ThemeIcon />
-              <div className="flex mx-auto px-2 py-1 items-center bg-gray-500 dark:text-gray-200 dark:bg-blue-900 text-white rounded-full">
+              <div className="flex mx-auto px-2 py-1 items-center hover:bg-third transition duration-500 hover:text-main dark:text-gray-200 dark:bg-blue-900 text-white rounded-full">
                 <Link className="flex" href={"https://github.com/ducks23"}>
                   <span className="mr-1">@ducks23</span>
                   <FaGithub size="20" />
@@ -67,8 +67,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="md:hidden  dark:bg-blue-300 bg-gray-200 w-full fixed p-3 mx-auto flex justify-between pr-4">
-        <Link className="my-auto cursor-pointer" href={"/"}>
+      <div className="md:hidden  dark:bg-darkthird shadow-md bg-main  w-full fixed p-3 mx-auto flex justify-between pr-4">
+        <Link className="my-auto  cursor-pointer" href={"/"}>
           <div className="flex font-bold">
             {" "}
             <RocketLaunchIcon className=" ml-4" />{" "}
@@ -77,8 +77,8 @@ const Navbar = () => {
         </Link>
         <div className="flex">
           <ThemeIcon />
-          <div className="bg-gray-300 rounded ml-0">
-            <TemporaryDrawer />{" "}
+          <div className=" bg-grayer dark:bg-darksecondary rounded ml-0">
+            <TemporaryDrawer sx={{ color: "white" }} />{" "}
           </div>
         </div>
       </div>

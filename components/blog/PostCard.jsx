@@ -6,7 +6,7 @@ import Link from "next/link";
 const PostCard = ({ post }) => {
   console.log(post.featuredImage.url, "url");
   return (
-    <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
+    <div className="bg-white dark:bg-darkthird shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
       {/* <div className="relative shadow-md inline-block w-full h-60 lg:h-80 mb-6">
       <Image
         unoptimized
@@ -66,7 +66,7 @@ const PostCard = ({ post }) => {
       </p>
       <div className="text-center">
         <Link href={`/blog/${post.slug}`}>
-          <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
+          <span className=" dark:bg-darkmain bg-grayer transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
             Continue Reading
           </span>
         </Link>

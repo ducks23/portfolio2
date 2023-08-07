@@ -29,7 +29,7 @@ export default function TemporaryDrawer() {
           onClose={() => setOpen(false)}
           PaperProps={{
             sx: {
-              backgroundColor: "#3749ad",
+              backgroundColor: "#1e40af",
               width: 250,
             },
           }}
