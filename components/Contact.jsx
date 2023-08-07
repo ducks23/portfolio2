@@ -31,8 +31,8 @@ const Contact = () => {
   return (
     <>
       <div>
-        <div className="contact-page flex justify-center p-6 text-cetner mx-auto ">
-          <div className="bg-main text-secondary p-4 max-w-3xl text-center rounded-lg">
+        <div className="contact-page dark:bg-darkmain dark:text-darksecondary flex justify-center p-6 text-cetner mx-auto ">
+          <div className="bg-main dark:bg-darkthird text-secondary dark:text-darksecondary p-4 max-w-3xl text-center rounded-lg">
             <h1 className="p-4 text-2xl underline underline-offset-4">
               Contact Me
             </h1>
