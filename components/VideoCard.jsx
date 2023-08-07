@@ -25,7 +25,7 @@ export default async function VideoCard() {
 
   return (
     <div className="p-0">
-      <h1 className="text-center dark:text-white text-gray-600 text-4xl pt-14">
+      <h1 className="text-center pb-2 dark:text-white text-gray-600 text-4xl pt-8">
         Videos
       </h1>
       {posts.map((post, index) => (

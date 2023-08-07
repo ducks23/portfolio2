@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 const Work = () => {
   return (
     <div className="flex flex-col pt-1 pl-9 pr-9">
@@ -78,6 +78,15 @@ const Work = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <Link className="text-center" href={"/resume"}>
+          <div className="pt-8">
+            <button className="p-3 transition duration-500 hover:bg-blue-400 rounded-full bg-gray-200">
+              Resume
+            </button>
+          </div>
+        </Link>
       </div>
     </div>
   );
