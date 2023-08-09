@@ -78,7 +78,7 @@ const Contact = () => {
                   </li>
                   <li>
                     <input
-                      className="rounded-full hover:bg-third text-secondary px-5 py-2 cursor-pointer transition duration-500 bg-grayer"
+                      className="rounded-full dark:text-darksecondary  dark:bg-darkmain dark:hover:bg-third  hover:bg-third text-secondary px-5 py-2 cursor-pointer transition duration-500 bg-grayer"
                       type="submit"
                       value="SEND"
                     />
