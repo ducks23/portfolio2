@@ -67,7 +67,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="md:hidden  dark:bg-darkthird shadow-md bg-main  w-full fixed p-3 mx-auto flex justify-between pr-4">
+      <div className="md:hidden z-10 dark:bg-darkthird shadow-md bg-main  w-full fixed p-3 mx-auto flex justify-between pr-4">
         <Link className="my-auto  cursor-pointer" href={"/"}>
           <div className="flex font-bold">
             {" "}

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 const Work = () => {
   return (
-    <div className="flex flex-col dark:bg-darkmain text-secondary pt-1 pl-9 pr-9">
+    <div className="flex flex-col w-full dark:bg-darkmain text-secondary pt-1 pl-9 pr-9">
       <div className="flex">
         <div className=" flex md:text-lg  text-sm dark:bg-darkthird dark:text-darksecondary bg-main text-center px-4 py-2 mx-auto dark:bg-blue-300 rounded-full">
           <div className=" font-semibold">
@@ -82,7 +82,7 @@ const Work = () => {
       <div>
         <Link className="text-center" href={"/resume"}>
           <div className="pt-8">
-            <button className="p-3 transition duration-500  hover:bg-third rounded-full bg-main">
+            <button className="p-3 transition duration-500 dark:text-darksecondary  dark:bg-darkthird dark:hover:bg-third  hover:bg-third rounded-full bg-main">
               Resume
             </button>
           </div>
