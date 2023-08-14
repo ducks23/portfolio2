@@ -29,7 +29,7 @@ const ThemeIcon = () => {
 
 const Navbar = () => {
   return (
-    <nav className="dark:bg-darkthird dark:text-darksecondary text-secondary bg-main shadow font-mono">
+    <nav className="dark:bg-darkthird opacity-90 fixed w-full dark:text-darksecondary text-secondary bg-main shadow-md font-mono">
       <div className="hidden md:block pr-5 pl-5">
         <div className="max-w-4xl py-4 px-1 mx-auto">
           <div className="flex dark:text-darksecondary text-secondary justify-between">
