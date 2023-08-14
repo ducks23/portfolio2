@@ -23,15 +23,15 @@ const Work = () => {
               <div className=" text-4xl pt-2">Jesse Leonard</div>
               <div>Full Stack Developer / Entereprenuer</div>
             </div>
-
-            <div className="bg-main dark:bg-darksecondary p-[0.2rem] rounded-full">
-              <Image
-                alt="picture of me"
-                height={90}
-                width={90}
-                className="align-middle rounded-full"
-                src={jesse}
-              />
+            <div>
+              <div className="bg-main dark:bg-darksecondary p-[0.2rem]  rounded-full">
+                <Image
+                  alt="picture of me"
+                  width={90}
+                  className="align-middle rounded-full"
+                  src={jesse}
+                />
+              </div>
             </div>
           </div>
 
