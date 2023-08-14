@@ -1,5 +1,10 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import jesse from "../assets/me.jpg";
+
 const Work = () => {
   return (
     <div className="flex flex-col w-full dark:bg-darkmain text-secondary pt-1 pl-9 pr-9">
@@ -10,9 +15,27 @@ const Work = () => {
           </div>
         </div>
       </div>
+      <div className=" "></div>
       <div className="mx-auto">
         <div className=" dark:text-darksecondary pt-5 max-w-2xl  ">
-          <div className="text-left">
+          <div className="flex justify-between">
+            <div>
+              <div className=" text-4xl pt-2">Jesse Leonard</div>
+              <div>Full Stack Developer / Entereprenuer</div>
+            </div>
+
+            <div className="bg-main dark:bg-darksecondary p-[0.2rem] rounded-full">
+              <Image
+                alt="picture of me"
+                height={90}
+                width={90}
+                className="align-middle rounded-full"
+                src={jesse}
+              />
+            </div>
+          </div>
+
+          <div className="text-left pt-5">
             <h1 className="header underline-offset-2 underline text-3xl">
               Work
             </h1>
@@ -26,6 +49,15 @@ const Work = () => {
             Solutions. He publishes content to grow his online brand on his
             YouTube channel.
           </div>
+        </div>
+        <div>
+          <Link className="text-center" href={"/resume"}>
+            <div className="pt-14">
+              <button className="p-3 transition duration-500 dark:text-darksecondary  dark:bg-darkthird dark:hover:bg-third  hover:bg-third rounded-full bg-main">
+                Resume
+              </button>
+            </div>
+          </Link>
         </div>
         <div className="dark:text-darksecondary">
           <div className="bio text-3xl underline underline-offset-2 pt-8">
@@ -78,15 +110,6 @@ const Work = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <Link className="text-center" href={"/resume"}>
-          <div className="pt-8">
-            <button className="p-3 transition duration-500 dark:text-darksecondary  dark:bg-darkthird dark:hover:bg-third  hover:bg-third rounded-full bg-main">
-              Resume
-            </button>
-          </div>
-        </Link>
       </div>
     </div>
   );
