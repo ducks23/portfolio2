@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import jesse from "../assets/me.jpg";
+import jesse from "../assets/me2.jpg";
 
 const Work = () => {
   return (
