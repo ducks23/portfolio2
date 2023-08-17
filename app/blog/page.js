@@ -7,7 +7,7 @@ export default async function Blog() {
   const posts = await getPosts();
 
   return (
-    <div className="dark:bg-darkmain">
+    <div className="dark:bg-darkmain min-h-[1200px]">
       <div className="dark:bg-darkmain dark:text-darksecondary  container mx-auto px-10 pt-24 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8 col-span-1">
