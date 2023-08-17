@@ -1,21 +1,17 @@
 import React from "react";
 
-const apiKey = process.env.YOUTUBE_API_KEY;
-const channelId = process.env.CHANNEL_ID;
+//const apiKey = process.env.YOUTUBE_API_KEY;
+//const channelId = process.env.CHANNEL_ID;
+const apiKey = "AIzaSyBIfW4fCEOyQIwYaEOS-4vIt_lq-xQzH0Y";
+const channelId = "UCsbiWRPPhj6BfmqGqQeIhVw";
+const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=20`;
 
-const url = new URL(
-  "http://" +
-    `www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=20`
-);
-
-console.log(url);
 async function fetchYouTubeData() {
-  console.log(url);
-
+  console.log(process.env.YOUTUBE_API_KEY);
+  console.log(process.env.CHANNEL_ID);
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      console.log(response);
       throw new Error("Network response was not ok.");
     }
     const data = await response.json();
