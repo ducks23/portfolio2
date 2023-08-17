@@ -7,7 +7,7 @@ const channelId = "UCsbiWRPPhj6BfmqGqQeIhVw";
 const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=20`;
 
 async function fetchYouTubeData() {
-  console.log(process.env.YOUTUBE_API_KEY);
+  console.log(process.env.YOUTUBE_API_KEY, "fetch youtube data");
   console.log(process.env.CHANNEL_ID);
   try {
     const response = await fetch(url);
