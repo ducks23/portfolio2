@@ -31,7 +31,7 @@ export default async function VideoCard() {
   return (
     <div className="p-4 dark:bg-darkmain">
       <h1 className="text-center pb-2 dark:text-darksecondary text-secondary text-4xl pt-8">
-        Check Out my Most recent Videos :)
+        Check Out My Most Recent Videos :)
       </h1>
       <div className="flex pt-4 flex-col md:flex-row justify-center">
         {vids.map((post, index) => (
