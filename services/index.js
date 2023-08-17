@@ -3,7 +3,9 @@ import { request, gql } from "graphql-request";
 //const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 console.log(process.env);
 console.log(process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT);
-const graphqlAPI = "http://" + process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+const url = "https://" + process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+
+const graphqlAPI = new URL(url);
 export async function getPosts() {
   const query = gql`
     query MyQuery {
