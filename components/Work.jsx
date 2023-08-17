@@ -65,7 +65,7 @@ const Work = () => {
               {" "}
               <p className="font-bold">1995</p>
             </div>
-            <div className="t ml-5">Born in Phoneix, AZ</div>
+            <div className="t ml-5">Born in Phoneix, AZ.</div>
           </div>
 
           <div className="entries pt-2 text-lg flex">
