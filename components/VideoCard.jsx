@@ -8,7 +8,10 @@ const url = new URL(
     `www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=20`
 );
 
+console.log(url);
 async function fetchYouTubeData() {
+  console.log(url);
+
   try {
     const response = await fetch(url);
     if (!response.ok) {
