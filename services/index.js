@@ -3,7 +3,7 @@ import { request, gql } from "graphql-request";
 //const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 console.log(process.env);
 console.log(process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT);
-const url = "http://" + process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+const url = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
 const graphqlAPI = new URL(url);
 export async function getPosts() {
