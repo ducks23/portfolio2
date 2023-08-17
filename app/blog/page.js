@@ -1,7 +1,7 @@
 import PostCard from "@/components/blog/PostCard";
 import PostWidget from "@/components/blog/PostWidget";
 import Categories from "@/components/blog/Categories";
-import { request, gql } from "graphql-request";
+import { getPosts } from "@/services";
 
 export default async function Blog() {
   const posts = await getPosts();
@@ -25,43 +25,4 @@ export default async function Blog() {
       </div>
     </div>
   );
-}
-
-//const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
-const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
-
-export async function getPosts() {
-  const query = gql`
-    query MyQuery {
-      postsConnection {
-        edges {
-          node {
-            author {
-              bio
-              name
-              id
-              photo {
-                url
-              }
-            }
-            createdAt
-            slug
-            title
-            excerpt
-            featuredImage {
-              url
-            }
-            categories {
-              slug
-              name
-            }
-          }
-        }
-      }
-    }
-  `;
-
-  const result = await request(graphqlAPI, query);
-
-  return result.postsConnection.edges;
 }
