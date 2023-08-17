@@ -3,7 +3,9 @@ import React from "react";
 const apiKey = process.env.YOUTUBE_API_KEY;
 const channelId = process.env.CHANNEL_ID;
 
-const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=20`;
+const url = new URL(
+  `www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=20`
+);
 
 async function fetchYouTubeData() {
   try {
