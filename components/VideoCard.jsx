@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 
 const apiKey = process.env.YOUTUBE_API_KEY;
