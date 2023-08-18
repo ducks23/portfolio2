@@ -27,7 +27,7 @@ export default async function VideoCard() {
   vids.push(posts[1]);
 
   return (
-    <div className="p-4 dark:bg-darkmain">
+    <div className="z-0 p-4 dark:bg-darkmain">
       <h1 className="text-center pb-2 dark:text-darksecondary text-secondary text-4xl pt-8">
         Check Out My Most Recent Videos :)
       </h1>
@@ -36,7 +36,7 @@ export default async function VideoCard() {
           <div className="p-4 pt-6 relative h-[590px]">
             <div className="max-w-md h-[590px] pt-2 mx-auto rounded-2xl dark:bg-darkthird dark:text-darksecondary bg-main">
               <img
-                className="w-full h-64 object-cover rounded-2xl p-2"
+                className="w-full h-64 z-0 object-cover rounded-2xl p-2"
                 src={post.snippet.thumbnails.high.url}
                 alt="Card Image"
               />
