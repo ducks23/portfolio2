@@ -33,13 +33,19 @@ export default async function VideoCard() {
       </h1>
       <div className="flex pt-4 flex-col md:flex-row justify-center">
         {vids.map((post, index) => (
-          <div className="p-4 pt-6 relative h-[590px]">
+          <div className="p-4 mt-4 relative h-[590px]">
             <div className="max-w-md h-[590px] pt-2 mx-auto rounded-2xl dark:bg-darkthird dark:text-darksecondary bg-main">
-              <img
-                className="w-full h-64 z-0 object-cover rounded-2xl p-2"
-                src={post.snippet.thumbnails.high.url}
-                alt="Card Image"
-              />
+              <a
+                href={`https://www.youtube.com/watch?v=${post.id.videoId}&ab_channel=JesseLeonard-CloudArchitect`}
+                className="cursor-pointer"
+              >
+                <img
+                  className="w-full h-64 z-0 object-cover rounded-2xl p-2"
+                  src={post.snippet.thumbnails.high.url}
+                  alt="Card Image"
+                />
+              </a>
+
               <div className="px-6 py-4">
                 <div className="font-bold text-secondary dark:text-darksecondary text-xl mb-2">
                   {post.snippet.title}
@@ -51,14 +57,6 @@ export default async function VideoCard() {
                   {post.snippet.description}
                 </p>
               </div>
-            </div>
-            <div className="absolute ml-[7rem] md:ml-14  justify-center inset-x-0 bottom-0 h-16">
-              <a
-                href={`https://www.youtube.com/watch?v=${post.id.videoId}&ab_channel=JesseLeonard-CloudArchitect`}
-                className="bg-third p-2 hover:bg-darkmain dark:text-darksecondary dark:bg-darkmain dark:hover:bg-purple transition duration-300 text-main font-bold rounded"
-              >
-                Watch
-              </a>
             </div>
           </div>
         ))}
