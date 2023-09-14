@@ -14,13 +14,13 @@ const ThemeIcon = () => {
   return (
     <div
       onClick={handleMode}
-      className=" hover:bg-third transition duration-500 cursor-pointer  rounded-lg p-2 mr-5"
+      className=" hover:bg-third transition duration-500 cursor-pointer  rounded-lg p-2 mr-1"
     >
       <span>
         {darkTheme ? (
-          <FaSun size="20" className="top-navigation-icon" />
+          <FaSun size="18" className="top-navigation-icon" />
         ) : (
-          <FaMoon size="20" className="top-navigation-icon" />
+          <FaMoon size="18" className="top-navigation-icon" />
         )}
       </span>
     </div>
@@ -57,10 +57,14 @@ const Navbar = () => {
             </div>
             <div className="flex items-center space-x-2">
               <ThemeIcon />
-              <div className="flex mx-auto px-2 py-1 items-center hover:bg-third transition duration-500 hover:text-main dark:text-gray-200 dark:bg-blue-900 text-white rounded-full">
-                <Link className="flex" href={"https://github.com/ducks23"}>
-                  <span className="mr-1">@ducks23</span>
+              <div className="flex mx-auto px-2 py-2 items-center hover:bg-third transition duration-500 hover:text-main dark:text-gray-200 dark:bg-blue-900 text-white rounded-lg">
+                <Link
+                  className="flex"
+                  href={"https://github.com/ducks23/portfolio2"}
+                >
                   <FaGithub size="20" />
+
+                  <span className="ml-1">Source </span>
                 </Link>
               </div>
             </div>

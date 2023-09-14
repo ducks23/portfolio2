@@ -3,6 +3,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+
+import { FaLinkedin, FaInstagram, FaGithub, FaYoutube } from "react-icons/fa";
+
 import jesse from "../assets/me2.jpg";
 
 const Work = () => {
@@ -104,6 +107,56 @@ const Work = () => {
             </div>
             <div className="t ml-5 max-w-2xl">
               Worked as a Full Stack Engineer at IPTA.
+            </div>
+          </div>
+        </div>
+        <div className=" dark:text-darksecondary  max-w-2xl  ">
+          <div className="max-w-2xl text-3xl underline underline-offset-2 pt-10">
+            {" "}
+            I ♥
+          </div>
+          <div className="max-w-2xl pt-4 text-center text-xl">
+            Ice Hockey, Art, Music, Reading, Chess, Next JS, Python, Three JS.{" "}
+          </div>
+        </div>
+        <div className=" dark:text-darksecondary  max-w-2xl  ">
+          <div className="max-w-2xl text-3xl underline underline-offset-2 pt-10">
+            {" "}
+            On the Interwebz
+          </div>
+          <div className="flex flex-col max-w-2xl pt-4 text-lg">
+            <div>
+              <Link
+                className=" hover:underline hover:text-main py-2  hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
+                href={`/`}
+              >
+                <FaInstagram /> <div className="p-2">@jesselynyrd </div>{" "}
+              </Link>
+            </div>{" "}
+            <div>
+              <Link
+                className=" hover:underline hover:text-main py-2  hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
+                href={`https://www.linkedin.com/in/jesseleonard/`}
+              >
+                <FaLinkedin /> <div className="p-2">Professional Me </div>{" "}
+              </Link>
+            </div>{" "}
+            <div>
+              <Link
+                className=" hover:underline hover:text-main py-2  hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
+                href={`https://github.com/ducks23`}
+              >
+                <FaGithub />
+                <div className="p-2">Code I have written </div>
+              </Link>
+            </div>{" "}
+            <div>
+              <Link
+                className=" hover:underline hover:text-main py-2  hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
+                href={`https://www.youtube.com/channel/UCsbiWRPPhj6BfmqGqQeIhVw`}
+              >
+                <FaYoutube /> <div className="p-2">Me On Video </div>
+              </Link>
             </div>
           </div>
         </div>
