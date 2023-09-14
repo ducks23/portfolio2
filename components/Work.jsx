@@ -127,15 +127,15 @@ const Work = () => {
           <div className="flex flex-col max-w-2xl pt-4 text-lg">
             <div>
               <Link
-                className=" hover:underline hover:text-main py-2  hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
-                href={`/`}
+                className=" hover:underline hover:text-main  hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
+                href={`https://www.instagram.com/jesselynyrd/`}
               >
                 <FaInstagram /> <div className="p-2">@jesselynyrd </div>{" "}
               </Link>
             </div>{" "}
             <div>
               <Link
-                className=" hover:underline hover:text-main py-2  hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
+                className=" hover:underline hover:text-main hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
                 href={`https://www.linkedin.com/in/jesseleonard/`}
               >
                 <FaLinkedin /> <div className="p-2">Professional Me </div>{" "}
@@ -143,7 +143,7 @@ const Work = () => {
             </div>{" "}
             <div>
               <Link
-                className=" hover:underline hover:text-main py-2  hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
+                className=" hover:underline hover:text-main hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
                 href={`https://github.com/ducks23`}
               >
                 <FaGithub />
@@ -152,7 +152,7 @@ const Work = () => {
             </div>{" "}
             <div>
               <Link
-                className=" hover:underline hover:text-main py-2  hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
+                className=" hover:underline hover:text-main hover:rounded-lg rounded-lg pr-2 flex items-center  transition duration-500 cursor-pointer "
                 href={`https://www.youtube.com/channel/UCsbiWRPPhj6BfmqGqQeIhVw`}
               >
                 <FaYoutube /> <div className="p-2">Me On Video </div>
