@@ -53,8 +53,8 @@ const Work = () => {
         <div>
           <Link className="text-center" href={"/resume"}>
             <div className="pt-14">
-              <button className="p-3 transition duration-500 dark:text-darksecondary  dark:bg-darkthird dark:hover:bg-third  hover:bg-third rounded-full bg-main">
-                Resume
+              <button className="p-3 transition duration-500 dark:text-darksecondary  dark:bg-darkthird dark:hover:bg-third  hover:bg-third rounded-xl bg-main">
+                <p className="px-1"> {`Resume`} &#10140;</p>
               </button>
             </div>
           </Link>
