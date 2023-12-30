@@ -48,7 +48,7 @@ const Navbar = () => {
                     Resume
                   </span>
                 </Link>{" "}
-                <Link href={`https://markdown-blog-inky.vercel.app/`}>
+                <Link href={`https://jesseleonard.app/`}>
                   <span className="transition hover:bg-third px-2 py-[7px] hover:rounded-lg hover:text-main font-bold duration-500 rounded-lg ease  transform cursor-pointer">
                     Blog
                   </span>
