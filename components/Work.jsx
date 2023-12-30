@@ -12,7 +12,7 @@ const Work = () => {
   return (
     <div className="flex flex-col w-full dark:bg-darkmain text-secondary pt-1 pl-9 pr-9">
       <div className="flex">
-        <div className=" flex md:text-lg  text-sm dark:bg-darkthird dark:text-darksecondary bg-main text-center px-4 py-2 mx-auto dark:bg-blue-300 rounded-full">
+        <div className=" flex md:text-lg  text-sm dark:bg-darkthird dark:text-darksecondary bg-[#90ee90] text-center px-4 py-2 mx-auto dark:bg-blue-300 rounded-full">
           <div className=" font-semibold">
             Hello, I'm a human being based in Austin Texas.
           </div>
