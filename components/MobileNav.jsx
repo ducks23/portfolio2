@@ -67,7 +67,7 @@ export default function TemporaryDrawer() {
                 </ListItemIcon>
               </ListItem>
             </Link>
-            <Link href={`/blog`}>
+            <Link href={`https://markdown-blog-inky.vercel.app/`}>
               <ListItem button onClick={() => setOpen(false)}>
                 <ListItemIcon>
                   <ListItem
