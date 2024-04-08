@@ -43,11 +43,11 @@ const Work = () => {
 
           <div className="text-left text-lg pt-2">
             &nbsp; &nbsp; &nbsp; Jesse is a freelance and full-stack developer
-            with a passion for elegant design. He has knack for solving real
+            with a passion for elegant design. He has a knack for solving real
             world problems with code. When not online, he loves to explore used
             book stores and play ice hockey. Currently, he is working at IPTA
-            Solutions. He publishes content to grow his online brand on his
-            YouTube channel.
+            Solutions. He also publishes software content on his YouTube
+            channel.
           </div>
         </div>
         <div>
