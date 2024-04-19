@@ -22,9 +22,10 @@ async function fetchYouTubeData() {
 export default async function VideoCard() {
   var vids = [];
   const posts = await fetchYouTubeData();
+  console.log(posts);
 
   vids.push(posts[13]);
-  vids.push(posts[14]);
+  vids.push(posts[0]);
 
   return (
     <div className="z-0 p-4 dark:bg-darkmain">
