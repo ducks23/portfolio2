@@ -18,8 +18,8 @@ const Car = () => {
     new THREE.Vector3(
       20 * Math.sin(0.2 * Math.PI),
       10,
-      20 * Math.cos(0.2 * Math.PI)
-    )
+      20 * Math.cos(0.2 * Math.PI),
+    ),
   );
   const [scene] = useState(new Scene());
   const [_controls, setControls] = useState();
@@ -63,7 +63,7 @@ const Car = () => {
         scale,
         -scale / 2,
         0.01,
-        5000
+        5000,
       );
       camera.position.copy(initialCameraPosition);
       camera.lookAt(target);
