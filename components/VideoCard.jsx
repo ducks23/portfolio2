@@ -24,7 +24,7 @@ export default async function VideoCard() {
   const posts = await fetchYouTubeData();
   console.log(posts);
 
-  vids.push(posts[14]);
+  vids.push(posts[0]);
   vids.push(posts[15]);
 
   return (
