@@ -8,7 +8,8 @@ export default function Home() {
     <div className=" dark:bg-gray-800 font-mono">
       <Car />
       <Work />
-      <VideoCard />
+      {/*       <VideoCard />
+       */}
       <Contact />
     </div>
   );
